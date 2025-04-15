@@ -1,35 +1,31 @@
 ## Project 1: Build a Web App using ECDSA
 
-This project is an example of using a client and server to facilitate transfers between different addresses. Since there is just a single server on the back-end handling transfers, this is clearly very centralized. We won't worry about distributed consensus for this project.
+This project demonstrates the use of a client-server architecture to facilitate secure transfers between different addresses using **Elliptic Curve Digital Signatures (ECDSA)**. The goal is to ensure that only the owner of an address can authorize transactions by signing them with their private key.
 
-However, something that we would like to incorporate is Public Key Cryptography. By using Elliptic Curve Digital Signatures we can make it so the server only allows transfers that have been signed for by the person who owns the associated address.
-
-## Video Instructions
-For an overview of this project as well as getting started instructions, check out the following video:
-
-https://www.youtube.com/watch?v=GU5vlKaNvmI
-
-If you are interested in a text-based guide, please read on below. ⬇️
+---
 
 ## Setup Instructions
- 
+
 ### Client
 
-The client folder contains a [react app](https://reactjs.org/) using [vite](https://vitejs.dev/). To get started, follow these steps:
+The client folder contains a [React app](https://reactjs.org/) using [Vite](https://vitejs.dev/). To get started:
 
-1. Open up a terminal in the `/client` folder
-2. Run `npm install` to install all the dependencies
-3. Run `npm run dev` to start the application 
-4. Now you should be able to visit the app at http://localhost:5173/
+1. Open a terminal in the `/client` folder.
+2. Run `npm install` to install all dependencies.
+3. Run `npm run dev` to start the application.
+4. Visit the app at [http://localhost:5173/](http://localhost:5173/).
 
 ### Server
 
-The server folder contains a Node.js server using [express](https://expressjs.com/). To run the server, follow these steps:
+The server folder contains a Node.js server using [Express](https://expressjs.com/). To run the server:
 
-1. Open a terminal within the `/server` folder 
-2. Run `npm install` to install all the dependencies 
-3. Run `node index` to start the server
+1. Open a terminal in the `/server` folder.
+2. Run `npm install` to install all dependencies.
+3. Run `node index` to start the server.
 
-_Hint_ - > Run `npm i -g nodemon` and then run `nodemon index` instead of `node index` to automatically restart the server on any changes!
+**Hint**: Use `nodemon` for automatic server restarts on file changes:
 
-The application should connect to the default server port (3042) automatically!
+```bash
+npm i -g nodemon
+nodemon index
+```
